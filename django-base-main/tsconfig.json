@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "baseUrl": "./",
+    "allowJs": true,
+    "module": "ESNext",
+    "moduleResolution": "node"
+  },
+  "exclude": ["node_modules"],
+  "include": [".", "*.ts", "rollup.config.ts"]
+}
