@@ -1,6 +1,7 @@
 import typescript from 'rollup-plugin-typescript2'
 import includePaths from 'rollup-plugin-includepaths'
 import { glob } from 'glob'
+
 import * as path from 'path'
 import { writeFileSync, mkdirSync, existsSync, unlinkSync } from 'fs'
 
@@ -52,7 +53,7 @@ const entryPoints = glob.sync('**/initialize.ts').map((file: string) => { // exp
 
 const plugins = [
   typescript(),
-  includePaths({ paths: ['./'] }) // allows us to import relative paths in TS
+  includePaths({ paths: ['./'] }), // allows us to import relative paths in TS
 ]
 
 const rollupConfig = entryPoints.map(([outputFilename, inputFilename]) => {

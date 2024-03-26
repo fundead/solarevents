@@ -1,1 +1,38 @@
-<h1>Home page!</h1>
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h1>Solar events</h1>
+    <div>
+        <button id="app-load-solar-events" class="btn btn-info">Load solar events from disk</button>
+        <button id="app-pull-revisions" class="btn btn-info">Fetch article revisions from Wikipedia</button>
+        <div id="app-xhr-status">&nbsp;</div>
+    </div>
+    <div>
+        <div id="chart-container" style="height:500px;"></div>
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Event date</th>
+                <th scope="col">Event name</th>
+                <th scope="col">Description</th>
+                <th scope="col">Tags</th>
+                <th scope="col">Link to additional info</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for se in solar_events %}
+            <tr>
+                <td>{{ se.event_date }}</th>
+                <td>{{ se.event_name }}</td>
+                <td>{{ se.event_description }}</td>
+                <td>{{ se.tags }}</td>
+                <td><a href="{{ se.link }}" target="_blank">{{ se.link }}</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% include 'pages/built_scripts/chart.html' %}
+    {% endblock %}
+</div>

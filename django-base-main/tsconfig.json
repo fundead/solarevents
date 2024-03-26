@@ -7,5 +7,6 @@
     "moduleResolution": "node"
   },
   "exclude": ["node_modules"],
-  "include": [".", "*.ts", "rollup.config.ts"]
+  "include": [".", "*.ts", "rollup.config.ts"],
+  "typeRoots": ["echarts.d.ts" ]
 }

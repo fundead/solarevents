@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "myproject"
+name = "solarevents"
 version = "0.1.0"
 description = "This is a template project"
 authors = ["Morgan Tenney <morgan.tenney@swiftsolar.com>"]
@@ -9,6 +9,9 @@ readme = "README.md"
 python = "^3.12"
 django = "^5.0.2"
 pytest = "^8.0.2"
+requests = "^2.31.0"
+python-dateutil = "^2.9.0.post0"
+pytest-django = "^4.8.0"
 
 
 [build-system]
