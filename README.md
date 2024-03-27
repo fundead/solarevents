@@ -9,6 +9,7 @@ Supported commands:
 ## Installing, DB setup and building
 
 ```
+cd django-base-main
 poetry install
 poetry run python manage.py migrate
 
